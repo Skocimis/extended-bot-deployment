@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  bot:
+    build: 
+      context: ./bot
+      dockerfile: Dockerfile
+    container_name: extended-bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - EXTENDED_VAULT=${EXTENDED_VAULT}
+      - EXTENDED_PRIVATE_KEY=${EXTENDED_PRIVATE_KEY}
+      - EXTENDED_PUBLIC_KEY=${EXTENDED_PUBLIC_KEY}
+      - EXTENDED_API_KEY=${EXTENDED_API_KEY}
+    volumes:
+      - ./bot/logs:/app/logs
+    # Alternative: use env_file instead of environment section above
+    # env_file:
+    #   - .env
