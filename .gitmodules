@@ -1,3 +1,4 @@
 [submodule "bot"]
 	path = bot
 	url = https://github.com/Skocimis/extended-telegram-bot
+	branch = main
