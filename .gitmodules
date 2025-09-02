@@ -2,3 +2,7 @@
 	path = bot
 	url = https://github.com/Skocimis/extended-telegram-bot
 	branch = main
+[submodule "kms"]
+	path = kms
+	url = https://github.com/goeticb/key-management-service
+	branch = main
